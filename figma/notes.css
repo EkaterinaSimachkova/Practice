@@ -748,6 +748,11 @@ main {
     height: 40px;
 }
 
+.button {
+    background: none;
+    border: 0px;
+}
+
 .tool-grid {
     padding: 6px 5px 6px 10px;
 
@@ -823,6 +828,17 @@ main {
     height: 930px;
 }
 
+.grid-main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px;
+    row-gap: 15px;
+    column-gap: 25px; 
+
+    width: 820px;
+    height: 930px;
+}
+
 .note-icon {
     padding: 5px;
 
@@ -845,7 +861,7 @@ main {
     border-radius: 10px;
 }
 
-.note-tittle {
+.note-title {
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 12px;
@@ -855,7 +871,7 @@ main {
     color: #6B7A99;
 }
 
-.note-tittle-current {
+.note-title-current {
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 12px;
