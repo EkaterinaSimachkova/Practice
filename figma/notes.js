@@ -57,10 +57,16 @@ let btnGrid = document.getElementById('button-grid')
 
 function displayFlex() {
     content.className = 'main-content'
+
     let imgs = content.querySelectorAll('img')
     for (let img of imgs) {
         img.style.width = '150px'
         img.style.height = '110px'
+    }
+
+    let ps = content.querySelectorAll('p')
+    for (let p of ps) {
+        p.style.display = 'block'
     }
 }
 
@@ -71,6 +77,11 @@ function displayGrid() {
     for (let img of imgs) {
         img.style.width = '100%'
         img.style.height = '100%'
+    }
+
+    let ps = content.querySelectorAll('p')
+    for (let p of ps) {
+        p.style.display = 'none'
     }
 }
 

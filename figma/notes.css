@@ -824,18 +824,21 @@ main {
     row-gap: 15px;
     column-gap: 25px;
     
-    width: 820px;
+    width: 730px;
     height: 930px;
 }
 
 .grid-main-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: row;
+    
     padding: 50px;
     row-gap: 15px;
-    column-gap: 25px; 
+    column-gap: 25px;
 
-    width: 820px;
+    width: 730px;
     height: 930px;
 }
 
