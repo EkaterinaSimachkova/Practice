@@ -1,0 +1,60 @@
+<!--
+У нас есть дерево, структурированное как вложенные списки ul/li.
+
+Напишите код, который выведет каждый элемент списка <li>:
+
+Какой в нём текст (без поддерева) ?
+Какое число потомков – всех вложенных <li> (включая глубоко вложенные) ?
+-->
+
+<!DOCTYPE HTML>
+<html>
+<body>
+
+  <ul>
+    <li>Животные
+      <ul>
+        <li>Млекопитающие
+          <ul>
+            <li>Коровы</li>
+            <li>Ослы</li>
+            <li>Собаки</li>
+            <li>Тигры</li>
+          </ul>
+        </li>
+        <li>Другие
+          <ul>
+            <li>Змеи</li>
+            <li>Птицы</li>
+            <li>Ящерицы</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Рыбы
+      <ul>
+        <li>Аквариумные
+          <ul>
+            <li>Гуппи</li>
+            <li>Рыба-ангел</li>
+          </ul>
+        </li>
+        <li>Морские
+          <ul>
+            <li>Морская форель</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+    let lis = document.querySelectorAll('li')
+    for (let li of lis) {
+        console.log(li.firstChild.textContent)
+        console.log(li.querySelectorAll('li').length)
+    }
+  </script>
+
+</body>
+</html>
