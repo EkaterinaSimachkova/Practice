@@ -4,55 +4,52 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
+        <title>API</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
             rel="stylesheet" 
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
             crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
     </head>
 
     <body>
 
-        <header class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <img class="content-search-icon" src="Icon-search.jpg"></img>
-            <input id="input" class="form-control" type="text" placeholder="Количество элементов" value="">
-            <button class="btn btn-dark" type="button">Найти</button>
+        <header class="d-grid gap-2 d-md-flex justify-content-md-end mb-5">
+            <div class="input-group">
+                <img class="search-icon input-group-text" src="Icon-search.jpg"></img>
+                <input id="input" class="form-control" type="text" placeholder="Количество элементов" value="">
+            </div>
+            <button id="button-search" class="btn btn-dark" type="button">Найти</button>
         </header>
 
-        <div>
-            <button class="btn btn-dark" type="button" onclick="getRickAndMortyCharacters()">getRickAndMortyCharacters</button>
-            <button class="btn btn-dark" type="button" onclick="getPokemonCharacters()">getPokemonCharacters</button>
-            <button class="btn btn-dark" type="button" onclick="getDogs()">getDogs</button>
-        </div>
-
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="api" id="RickAndMorty" value="RickAndMorty">
-            <label class="form-check-label" for="inlineRadio1">Rick And Morty Characters</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="api" id="Pokemon" value="Pokemon">
-            <label class="form-check-label" for="inlineRadio2">Pokemon Characters</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="api" id="Dog" value="Dog">
-            <label class="form-check-label" for="inlineRadio3">Dogs</label>
+        <div class="d-flex flex-row justify-content-around mb-3">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="api" id="RickAndMorty" value="RickAndMorty" checked>
+                <label class="form-check-label" for="inlineRadio1">Rick And Morty Characters</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="api" id="Pokemon" value="Pokemon">
+                <label class="form-check-label" for="inlineRadio2">Pokemon Characters</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="api" id="Dog" value="Dog">
+                <label class="form-check-label" for="inlineRadio3">Dogs</label>
+            </div>
         </div>
         
-        <div class="Content">
-            <div class="content-bar">
-                <div class="content-tools">
-                    <button id="button-flex" class="button">
-                        <img class="tool-grid" src="Icon-grid.jpg"></img>
-                    </button>
+        <div class="d-flex flex-column justify-content-center mx-5">
+            <div class="d-flex flex-row">
+                <button id="button-flex" class="button">
+                    <img class="tool-grid" src="Icon-grid.jpg"></img>
+                </button>
 
-                    <button id="button-grid" class="button">
-                        <img class="tool-list" src="Icon-list.jpg"></img>
-                    </button>
-                </div>
+                <button id="button-grid" class="button">
+                    <img class="tool-list" src="Icon-list.jpg"></img>
+                </button>
             </div>
 
-            <div id="main-content" class="main-content">
-
+            <div class="container m-0 p-0">
+                <div id="main-content" class="main-content"></div>
             </div>
         </div>
     
